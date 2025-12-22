@@ -10,6 +10,10 @@ export default defineConfig({
     css: true,
     coverage: {
       reporter: ['text', 'lcov'],
+      lines: 10,
+      functions: 5,
+      branches: 5,
+      statements: 10,
     },
   },
 })
