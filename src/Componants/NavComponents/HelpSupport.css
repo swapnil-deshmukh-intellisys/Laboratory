@@ -1,0 +1,145 @@
+.help-wrapper {
+  background: linear-gradient(120deg, #e0f7fa, #ffffff);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.help-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.help-title {
+  text-align: center;
+  font-size: 36px;
+  color: #0db5ab;
+  margin-bottom: 30px;
+}
+
+.help-banner {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-banner h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.help-banner p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.help-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.help-card {
+  flex: 1 1 300px;
+  background: #f0fdfa;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  background: #e0f7f6;
+}
+
+.icon {
+  font-size: 28px;
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.icon.phone { background: #0db5ab; }
+.icon.whatsapp { background: #25D366; }
+.icon.email { background: #ff5722; }
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.value {
+  color: #555;
+  font-size: 14px;
+}
+
+.help-extra {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.help-extra h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.help-extra h4 {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.help-extra button {
+  padding: 10px 22px;
+  background: #0db5ab;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.help-extra button:hover {
+  background: #098f86;
+}
+
+.help-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .help-cards {
+    flex-direction: column;
+  }
+
+  .help-card {
+    width: 100%;
+  }
+
+  .help-title {
+    font-size: 28px;
+  }
+
+  .help-banner h2 {
+    font-size: 20px;
+  }
+}
