@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AddMemberForm.css';
+import { isValidName, isValidDateDMY, isValidAge, isValidMobile, isValidEmail } from '../../utils/validators';
 
 const AddMemberForm = () => {
   const [formData, setFormData] = useState({
@@ -28,32 +29,25 @@ const AddMemberForm = () => {
 
   const validateField = (name, value) => {
     let error = '';
-    const validationPatterns = {
-      fullName: /^[a-zA-Z ]{2,30}$/,
-      dob: /^\d{2}-\d{2}-\d{4}$/,
-      age: value => value > 0 && value <= 120,
-      phone: /^\d{10}$/,
-      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    };
 
     if (!value.trim() && name !== 'phone' && name !== 'email') {
       error = 'This field is required';
     } else {
       switch(name) {
         case 'fullName':
-          if (!validationPatterns.fullName.test(value)) error = 'Invalid name';
+          if (!isValidName(value)) error = 'Invalid name';
           break;
         case 'dob':
-          if (!validationPatterns.dob.test(value)) error = 'Use dd-mm-yyyy';
+          if (!isValidDateDMY(value)) error = 'Use dd-mm-yyyy';
           break;
         case 'age':
-          if (!validationPatterns.age(value)) error = 'Invalid age (1-120)';
+          if (!isValidAge(value)) error = 'Invalid age (1-120)';
           break;
         case 'phone':
-          if (value && !validationPatterns.phone.test(value)) error = 'Invalid phone';
+          if (value && !isValidMobile(value)) error = 'Invalid phone';
           break;
         case 'email':
-          if (value && !validationPatterns.email.test(value)) error = 'Invalid email';
+          if (value && !isValidEmail(value)) error = 'Invalid email';
           break;
       }
     }

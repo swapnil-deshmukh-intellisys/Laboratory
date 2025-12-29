@@ -51,6 +51,7 @@ import ESGPractices from './Componants/FooterPages/ESGPractices';
 import Faq from './Componants/FooterPages/Faq';
 import MenHealthCheckup from "./Componants/MenHealthCheckup";
 import AnnualHealthPackage from "./Componants/AnnualHealthPackage";
+import HealthCalc from "./Componants/HealthCalc";
 
 
 
@@ -114,6 +115,7 @@ function App() {
           <Route path="/Faq" element={<Faq/>} />
           <Route path="/MenHealthCheckup" element={<MenHealthCheckup/>} />
          <Route path="/AnnualHealthPackage" element={<AnnualHealthPackage/>} />
+         <Route path="/healthcalc" element={<HealthCalc/>} />
 
 
 
