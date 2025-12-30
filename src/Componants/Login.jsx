@@ -1,11 +1,16 @@
 // Login.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { post } from '../services/apiClient';
+import { globalStore } from '../services/dataStore';
 import './Login.css';
 import {
   Box, TextField, Button, Typography, Divider, IconButton,
   InputAdornment, CircularProgress, Alert
 } from '@mui/material';
-import { WhatsApp, Person, Phone, Email, Lock } from '@mui/icons-material';
+import {
+  WhatsApp, Person, Phone, Email, Lock
+} from '@mui/icons-material';
 
 const Login = () => {
   const [formData, setFormData] = useState({ 

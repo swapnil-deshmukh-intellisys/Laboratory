@@ -52,6 +52,7 @@ import Faq from './Componants/FooterPages/Faq';
 import MenHealthCheckup from "./Componants/MenHealthCheckup";
 import AnnualHealthPackage from "./Componants/AnnualHealthPackage";
 import HealthCalc from "./Componants/HealthCalc";
+import StoreDemo from "./Componants/StoreDemo";
 
 
 
@@ -116,6 +117,7 @@ function App() {
           <Route path="/MenHealthCheckup" element={<MenHealthCheckup/>} />
          <Route path="/AnnualHealthPackage" element={<AnnualHealthPackage/>} />
          <Route path="/healthcalc" element={<HealthCalc/>} />
+         <Route path="/storedemo" element={<StoreDemo/>} />
 
 
 
