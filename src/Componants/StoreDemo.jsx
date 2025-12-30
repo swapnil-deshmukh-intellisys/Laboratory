@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { globalStore } from '../services/dataStore'
-import { get, post } from '../services/apiClient'
+import { post } from '../services/apiClient'
 
 const StoreDemo = () => {
   const [notifications, setNotifications] = useState([])

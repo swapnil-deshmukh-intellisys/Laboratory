@@ -80,6 +80,8 @@ export const globalStore = new DataStore({
   notifications: [],
 })
 
+import React from 'react'
+
 /**
  * Higher-order component helper to subscribe a React component to store keys.
  * @param {React.Component} Component
@@ -95,7 +97,7 @@ export function withStore(Component, keys = []) {
         globalStore.subscribe(key, forceUpdate)
       )
       return () => unsubscribes.forEach(fn => fn())
-    }, [keys])
+    }, [])
 
     const storeProps = {}
     keys.forEach(key => {

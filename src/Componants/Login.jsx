@@ -1,8 +1,5 @@
 // Login.jsx
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { post } from '../services/apiClient';
-import { globalStore } from '../services/dataStore';
+import React, { useState } from 'react';
 import './Login.css';
 import {
   Box, TextField, Button, Typography, Divider, IconButton,

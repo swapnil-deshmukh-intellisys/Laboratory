@@ -1,8 +1,11 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { apiFetch, get, post, put, del, clearCache } from './apiClient'
+import { apiFetch, post, put, del, clearCache } from './apiClient'
 
 // Mock fetch
-global.fetch = vi.fn()
+Object.defineProperty(globalThis, 'fetch', {
+  writable: true,
+  value: vi.fn(),
+})
 
 describe('apiClient', () => {
   beforeEach(() => {
